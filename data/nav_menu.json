@@ -1,0 +1,104 @@
+{
+  "links": [
+      {
+        "icon": {
+          "src": "/icons/nav_menu/logo.svg",
+          "alt": "Twitter logo",
+          "size": {
+            "width": 30,
+            "height": 30
+          }
+        }
+      },
+      {
+        "label": {
+          "es": "Inicio",
+          "en": "Home"
+        },
+        "icon": {
+          "src": "/icons/nav_menu/home.svg",
+          "alt": "Home icon"
+        }
+      },
+      {
+        "label": {
+          "es": "Explorar",
+          "en": "Explore"
+        },
+        "icon": {
+          "src": "/icons/nav_menu/hashtag.svg",
+          "alt": "Hashtag icon"
+        }
+      },
+      {
+        "label": {
+          "es": "Notificaciones",
+          "en": "Notifications"
+        },
+        "icon": {
+          "src": "/icons/nav_menu/notification.svg",
+          "alt": "Notifications icon"
+        }
+      },
+      {
+        "label": {
+          "es": "Mensajes",
+          "en": "Messages"
+        },
+        "icon": {
+          "src": "/icons/nav_menu/message.svg",
+          "alt": "Messages icon"
+        }
+      },
+      {
+        "label": {
+        "es": "Guardados",
+        "en": "Bookmarks"
+      },
+        "icon": {
+          "src": "/icons/nav_menu/bookmark.svg",
+          "alt": "Bookmarks icon"
+        }
+      },
+      {
+        "label": {
+        "es": "Listas",
+        "en": "Lists"
+      },
+        "icon": {
+          "src": "/icons/nav_menu/lists.svg",
+          "alt": "Lists icon"
+        }
+      },
+      {
+        "label": {
+          "es": "Perfil",
+          "en": "Profile"
+        },
+        "icon": {
+          "src": "/icons/nav_menu/profile.svg",
+          "alt": "Profile icon"
+        }
+      },
+      {
+        "label": {
+          "es": "Más opciones",
+          "en": "More"
+        },
+        "icon": {
+          "src": "/icons/nav_menu/more.svg",
+          "alt": "More options icon"
+        }
+      },
+      {
+      "label": {
+        "es": "Configuración",
+        "en": "Settings"
+      },
+      "icon": {
+        "src": "/icons/nav_menu/settings.svg",
+        "alt": "Settings icon"
+      }
+    }
+    ]
+}

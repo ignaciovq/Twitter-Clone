@@ -1,0 +1,84 @@
+#login_bar {
+  background-color: var(--main-primary-color);
+  height: 9vh;
+  min-height: 70px;
+  width: 100%;
+  padding: 0 20px;
+  position: fixed;
+  bottom: 0;
+  z-index: 5;
+  color: white;
+  font-weight: 500;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#text{
+  row-gap: 0.5vh;
+  margin-left: 20vw;
+  white-space: nowrap;
+}
+
+#text p{
+  font-size: 1.52rem;
+}
+
+#text span{
+  font-size: 0.91rem;
+  font-weight: 400;
+}
+
+#login_buttons{
+  column-gap: 1vw;
+  margin-left: 12vw;
+}
+
+#login_buttons button{
+  min-width: fit-content;
+  padding: 0.6rem 1.1rem;
+  border-radius: 34px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+#login_buttons button:first-child{
+  background-color: var(--main-primary-color);
+  border: 0.01em solid var(--main-font-color);
+  color: white;
+}
+
+#login_buttons button:first-child:hover{
+  background-color: hsl(203, 83%, 56%);
+}
+
+#login_buttons button:last-child:hover{
+  background-color: hsl(0, 0%, 85%)
+}
+
+@media (max-width: 1000px) {
+  #text{
+    margin-left: 5vw;
+  }
+  #login_buttons{
+    margin-left: 2.5vw;
+  }
+}
+
+@media (max-width: 700px) {
+  #text{
+    display: none;
+  }
+  #login_buttons{
+    width: 100%;
+    margin: 0;
+    gap: 1vmax;
+  }
+  #login_buttons button{
+    width: 100%;
+    padding: 0.8rem;
+  }
+}

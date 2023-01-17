@@ -1,0 +1,88 @@
+#header {
+    width: 24%;
+    min-width: 1.5rem;
+    height: 100vh;
+    border-right: 1px solid var(--layout-border-color);
+    font-size: var(--big-font-size);
+    font-weight: 500;
+}
+
+#navigation{
+    position: fixed;
+    top: 0;
+    width: 24%;
+    padding: 0.1rem 0;
+    margin-left: 0.5rem;
+    align-items: center;
+}
+
+#nav_menu{
+    width: fit-content;
+}
+
+.nav_item{
+    width: inherit;
+    padding: 0.8rem 1.5rem 0.8rem 0.8rem;
+    border-radius: 34px;
+    cursor: pointer;
+}
+
+.nav_item:first-child:hover{
+    padding: 0.8rem;
+    background-color: var(--logo-hover-color)
+}
+
+.nav_item:nth-child(n + 2):hover{
+    background-color: var(--main-hover-color);
+}
+
+#new_tweet_button{
+    background-color: var(--main-primary-color);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    border-radius: 34px;
+    cursor: pointer;
+    padding: 1rem 5.75vw;
+    margin: 0.5rem 0 0 1.25vw;
+}
+
+#new_tweet_button:hover{
+    background-color: hsl(203, 83%, 45%);
+}
+
+#new_tweet_button img{
+    display: none;
+}
+
+@media (max-width: 1000px){
+   #navigation{
+       margin-left: 0;
+   }
+    #new_tweet_button{
+        margin: 0.5rem 0;
+    }
+}
+
+@media (max-width: 750px){
+    .nav_item span{
+        display: none;
+    }
+    .nav_item{
+        padding: 0.8rem;
+    }
+    #navigation{
+        margin: 0;
+    }
+    #new_tweet_button{
+        padding: 0.75rem;
+    }
+    #new_tweet_button span{
+        display: none;
+    }
+    #new_tweet_button img{
+        display: inline-block;
+    }
+}
