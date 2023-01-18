@@ -1,6 +1,6 @@
 import styles from '../styles/loginbar.module.css'
 import { getSession } from 'next-auth/react'
-import LoginButtons from './login_buttons'
+import LoginButtons from './loginButtons'
 
 export default async function LoginBar () {
   const session = await getSession()

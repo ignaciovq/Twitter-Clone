@@ -1,7 +1,7 @@
 import styles from '../styles/navbar.module.css'
 import linkData from '../../data/nav_menu.json'
 import Image from 'next/image'
-import SessionMenu from './session_menu'
+import SessionMenu from './sessionMenu'
 import isLoggedIn from '../../utils/isLoggedIn'
 
 export default function Navbar () {
