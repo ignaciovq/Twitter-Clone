@@ -4,7 +4,7 @@
   --main-font-color: hsl(204, 6%, 84%);
   --darker-font-color: hsl(206, 3%, 46%);
   --main-primary-color: hsl(203, 83%, 52%);
-  --searchbar-bg-color: hsl(204, 9%, 13%);
+  --searchbar-bg-color: hsl(214, 10%, 14%);
   --logo-hover-color: rgba(29, 155, 240, 0.1);
   --main-hover-color: rgba(231, 233, 234, 0.1);
   --big-font-size: 20px;
@@ -48,3 +48,7 @@ a {
   column-gap: 1.5vw;
 }
 
+.container {
+  margin: 0 auto;
+  padding: .3rem .7rem;
+}

@@ -1,0 +1,26 @@
+#searchbar input{
+    background-color: var(--searchbar-bg-color);
+    border-radius: 34px;
+    padding: .8rem 1rem .8rem 3.5rem;
+    width: 80%;
+    border: 1px solid transparent;
+    outline: none;
+    font-size: var(--main-font-size);
+    color: var(--main-font-color);
+}
+
+#searchbar img{
+    position: relative;
+    left: 2.375rem;
+    top: 0.3rem;
+}
+
+#searchbar:focus-within input{
+    border-color: var(--main-primary-color);
+    background-color: var(--main-bg-color);
+}
+
+#searchbar:focus-within img{
+    filter: invert(56%) sepia(56%) saturate(3211%) hue-rotate(176deg) brightness(94%) contrast(94%);
+}
+

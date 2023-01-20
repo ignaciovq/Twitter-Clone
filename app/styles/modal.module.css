@@ -11,7 +11,7 @@
 }
 
 .modal header{
-    min-height: 0.5rem;
+    min-height: .75rem;
     border-bottom: 1px solid var(--layout-border-color);
 }
 

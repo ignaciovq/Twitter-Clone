@@ -3,7 +3,7 @@ import type { DefaultSession } from 'next-auth'
 import styles from '../styles/profile.module.css'
 import Image from 'next/image'
 import { ISODateString } from 'next-auth/core/types'
-import { signOut, useSession } from 'next-auth/react'
+import { useSession } from 'next-auth/react'
 import { useModal } from '../hooks/useModal'
 import { LogoutMenu } from './logoutMenu'
 
@@ -28,12 +28,12 @@ export const SessionMenu = () => {
     <>
       <LogoutMenu modalId={modalId} username={username || fullName || ''} />
       <button id={openButtonId} className='flex_row' onClick={openModal}>
-        <Image src={image || '../../public/default_pic.png'} alt='profile picture' width={35} height={35} />
+        <Image src={image || '../../public/default_pic.png'} alt='profile picture' width={40} height={40} />
         <div id={styles.profile_info} className='flex_column'>
-          <span>{fullName}</span>
+          <p>{fullName}</p>
           {username && (<span>{`@${username}`}</span>)}
         </div>
-        <Image src='/icons/options.svg' alt='...' width={15} height={15} />
+        <Image src='/icons/options.svg' alt='...' width={19} height={19} />
       </button>
     </>
   )

@@ -5,12 +5,13 @@
     outline: none;
     border-radius: 34px;
     align-items: center;
-    padding: 0.5rem;
+    padding: 0.75rem;
     white-space: nowrap;
     cursor: pointer;
     position: relative;
-    top: 15vh;
-    right: 0.5vw;
+    top: 14vh;
+    left: 0.75vw;
+    column-gap: 0.75vw;
 }
 
 #profile:hover{
@@ -19,6 +20,20 @@
 
 #profile img{
     border-radius: inherit;
+}
+
+#profile_info{
+    font-size: var(--main-font-size);
+    font-weight: bold;
+    margin-right: 0.75rem;
+    text-align: left;
+    gap: 0.20rem;
+}
+
+#profile_info span{
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: var(--darker-font-color);
 }
 
 @media (max-width: 1000px){

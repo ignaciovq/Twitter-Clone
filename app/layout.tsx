@@ -2,8 +2,8 @@ import './globals.css'
 import Navbar from './components/navbar'
 import LoginBar from './components/loginbar'
 import AuthContext from './components/authContext'
+import { Sidebar } from './components/sidebar'
 import isLoggedIn from '../utils/isLoggedIn'
-import { getToken } from 'next-auth/jwt'
 
 export default function RootLayout ({
   children
@@ -26,6 +26,7 @@ export default function RootLayout ({
           <main>
             {children}
           </main>
+          <Sidebar />
           {/* @ts-ignore */}
           {loggedIn || <LoginBar />}
         </AuthContext>
