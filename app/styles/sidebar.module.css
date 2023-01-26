@@ -1,11 +1,7 @@
 #sidebar{
-    min-width: 13.5rem;
-    max-width: 33.25vw;
+    width: 34.75rem;
     height: 100vh;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
+    position: relative;
     border-left: 1px solid var(--layout-border-color);
 }
 
@@ -39,6 +35,15 @@
 
 @media (max-width: 1000px) {
     #sidebar > div{
+        display: none;
+    }
+    #sidebar {
+        width: 7.5vw;
+    }
+}
+
+@media (max-width: 915px) {
+    #sidebar {
         display: none;
     }
 }

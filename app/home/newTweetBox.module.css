@@ -1,0 +1,107 @@
+.tweet_box{
+    background-color: var(--main-bg-color);
+    margin-top: 6.5rem;
+    border-bottom: 1px solid var(--layout-border-color);
+    flex-wrap: wrap;
+    gap: 0;
+    padding-right: 1.5rem;
+}
+
+.tweet_box > textarea{
+    background-color: var(--main-bg-color);
+    color: var(--main-font-color);
+    border: none;
+    outline: none;
+    margin-top: .5rem;
+    padding-top: 1.5rem;
+    font-size: var(--big-font-size);
+    flex-grow: 1;
+    resize: none;
+    font-family: inherit;
+}
+
+.tweet_box > textarea::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.tweet_box > textarea {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.tweet_box > img {
+    border-radius: 34px;
+    margin: 1rem;
+}
+
+.tweet_box footer {
+    flex-grow: 1;
+    margin-left: 4.75rem;
+    justify-content: space-between;
+}
+
+.tweet_options{
+    gap: .25rem;
+    align-items: center;
+}
+
+.tweet_options > button{
+    position: relative;
+    background-color: var(--main-bg-color);
+    border: none;
+    outline: none;
+    border-radius: 34px;
+    padding: .325rem .325rem .1rem .325rem;
+}
+
+.tweet_options > button[disabled] > img{
+    filter: invert(9%) sepia(92%) saturate(4905%) hue-rotate(192deg) brightness(45%) contrast(91%);
+}
+
+.tweet_options label{
+    display: none;
+    position: absolute;
+    background-color: hsl(0, 0%, 20%);
+    color: var(--main-font-color);
+    width: fit-content;
+    height: fit-content;
+    top: 2rem;
+    white-space: nowrap;
+    font-size: 0.65rem;
+    padding: .175rem;
+    border-radius: 2px;
+    z-index: 1;
+
+}
+
+.tweet_options > button:not([disabled]):hover {
+    background-color: var(--logo-hover-color);
+    cursor: pointer;
+}
+
+
+.tweet_options > button:not([disabled]):hover > label {
+    display: block;
+}
+
+.tweet_box:focus-within footer{
+    border-top: 1px solid var(--layout-border-color);
+}
+
+#tweet_button{
+    width: 6rem;
+    height: 2.2rem;
+    font-size: var(--main-font-size);
+    margin: .75rem 0;
+}
+
+#tweet_button[disabled] {
+    background-color: hsl(203, 83%, 25%);
+    color: hsl(0, 0%, 50%);
+    cursor: unset;
+}
+
+#tweet_button:not([disabled]):hover {
+   background-color: hsl(203, 83%, 45%);
+}

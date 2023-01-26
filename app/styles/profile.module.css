@@ -6,12 +6,11 @@
     border-radius: 34px;
     align-items: center;
     padding: 0.75rem;
-    white-space: nowrap;
     cursor: pointer;
     position: relative;
     top: 14vh;
-    left: 0.75vw;
-    column-gap: 0.75vw;
+    left: 1.5vw;
+    column-gap: 0.75vw;;
 }
 
 #profile:hover{
@@ -27,7 +26,8 @@
     font-weight: bold;
     margin-right: 0.75rem;
     text-align: left;
-    gap: 0.20rem;
+    gap: .2rem;
+    white-space: nowrap;
 }
 
 #profile_info span{
@@ -36,15 +36,28 @@
     color: var(--darker-font-color);
 }
 
-@media (max-width: 1000px){
+@media (max-width: 1100px){
     #profile{
         column-gap: 5px;
         margin: 0;
         padding: 0.5rem 0;
     }
+    #profile_info{
+        white-space: normal;
+        margin: 0;
+    }
 }
 
-@media (max-width: 750px){
+@media (max-width: 1300px){
+    #profile {
+        padding: 0;
+    }
+}
+
+@media (max-width: 1275px){
+    #profile{
+        left: 0;
+    }
     #profile_info{
         display: none;
     }
@@ -61,7 +74,7 @@
 
 @media (max-height: 700px) {
     #profile{
-        top: 5vh;
+        top: 4vh;
     }
 }
 

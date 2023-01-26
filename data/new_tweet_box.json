@@ -1,0 +1,46 @@
+{
+    "tweetOptions": [
+        {
+            "label": "Fotos y Videos",
+            "icon": {
+                "src": "/icons/new_tweet/media.svg",
+                "alt": "media"
+            }
+        },
+        {
+            "label": "GIF",
+            "icon": {
+                "src": "/icons/new_tweet/gif.svg",
+                "alt": "gif"
+            }
+        },
+        {
+            "label": "Encuesta",
+            "icon": {
+                "src": "/icons/new_tweet/poll.svg",
+                "alt": "poll"
+            }
+        },
+        {
+            "label": "Emoji",
+            "icon": {
+                "src": "/icons/new_tweet/emoji.svg",
+                "alt": "emoji"
+            }
+        },
+        {
+            "label": "Programación",
+            "icon": {
+                "src": "/icons/new_tweet/schedule.svg",
+                "alt": "schedule"
+            }
+        },
+        {
+            "label": "Ubicación",
+            "icon": {
+                "src": "/icons/new_tweet/location.svg",
+                "alt": "location"
+            }
+        }
+    ]
+}

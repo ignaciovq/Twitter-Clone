@@ -56,3 +56,27 @@
 #logout_menu button:hover{
     background-color: var(--main-hover-color);
 }
+
+@media (max-width: 1200px) {
+    #logout_menu_arrow{
+        left: 8.5vw;
+    }
+}
+
+@media (max-width: 1130px) {
+    #logout_menu_arrow{
+        left: 5vw;
+    }
+}
+
+@media (max-width: 1000px) {
+    #logout_menu_arrow{
+        left: 10.75vw;
+    }
+}
+
+@media (max-width: 750px) {
+    #logout_menu_arrow{
+        left: 4.75vw;
+    }
+}

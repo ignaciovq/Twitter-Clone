@@ -1,18 +1,20 @@
 #header {
-    width: 24%;
-    min-width: 1.5rem;
+    width: 25rem;
+    min-width: 5rem;
     height: 100vh;
     border-right: 1px solid var(--layout-border-color);
     font-size: var(--big-font-size);
     font-weight: 500;
+    position: relative;
 }
 
 #navigation{
-    position: fixed;
-    top: 0;
+    position: absolute;
+    top: .25rem;
+    right: 7.5rem;
+    margin-left: .5rem;
     width: 24%;
     padding: 0.1rem 0;
-    margin-left: 0.5rem;
     align-items: center;
 }
 
@@ -24,6 +26,7 @@
     width: inherit;
     padding: 0.8rem 1.5rem 0.8rem 0.8rem;
     border-radius: 34px;
+    outline: none;
     cursor: pointer;
 }
 
@@ -37,14 +40,6 @@
 }
 
 #new_tweet_button{
-    background-color: var(--main-primary-color);
-    color: white;
-    font-size: 1.1rem;
-    font-weight: bold;
-    border: none;
-    outline: none;
-    border-radius: 34px;
-    cursor: pointer;
     padding: 1rem 5.75vw;
     margin: 0.5rem 0 0 1.25vw;
 }
@@ -57,16 +52,19 @@
     display: none;
 }
 
-@media (max-width: 1000px){
+@media (max-width: 1300px){
+    #header{
+        width: 24vw;
+    }
    #navigation{
        margin-left: 0;
    }
-    #new_tweet_button{
-        margin: 0.5rem 0;
-    }
 }
 
-@media (max-width: 750px){
+@media (max-width: 1275px){
+    #header{
+        width: 20vw;
+    }
     .nav_item span{
         display: none;
     }
@@ -75,9 +73,13 @@
     }
     #navigation{
         margin: 0;
+        padding: 0;
+        width: 20%;
+        right: 2rem;
     }
     #new_tweet_button{
         padding: 0.75rem;
+        margin: 0.5rem 0;
     }
     #new_tweet_button span{
         display: none;
@@ -85,4 +87,30 @@
     #new_tweet_button img{
         display: inline-block;
     }
+}
+
+@media (max-width: 750px)
+{
+    #header{
+        width: 15vw;
+    }
+    #navigation{
+        width: 15%;
+    }
+    .nav_item{
+       margin: 0;
+       padding: .75rem;
+    }
+}
+
+@media (max-width: 600px)
+{
+    #header{
+        width: fit-content;
+    }
+    #navigation{
+        width: fit-content;
+        right: .75rem;
+    }
+
 }

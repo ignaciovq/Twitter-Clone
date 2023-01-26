@@ -25,7 +25,7 @@ export default function Navbar () {
         </section>
         {loggedIn && (
           <>
-            <button type='button' id={styles.new_tweet_button} className='flex_row'><span>Twittear</span><Image src='/icons/new_tweet.svg' alt='New Tweet' width={25} height={25} /></button>
+            <button type='button' id={styles.new_tweet_button} className='flex_row tweet_button'><span>Twittear</span><Image src='/icons/new_tweet.svg' alt='New Tweet' width={25} height={25} /></button>
             <SessionMenu />
           </>
         )}

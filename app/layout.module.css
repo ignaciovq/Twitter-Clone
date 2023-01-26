@@ -1,0 +1,25 @@
+#main_section {
+    gap: 0;
+}
+
+#main_section > main {
+    min-width: 25rem;
+    position: relative;
+}
+
+@media (max-width: 915px) {
+    #main_section > main {
+        width: 80vw;
+        border-right: 1px solid var(--layout-border-color);
+    }
+}
+
+@media (max-width: 750px) {
+    #main_section > main {
+        min-width: unset;
+        width: 100%;
+    }
+    #main_section{
+        width: 100%;
+    }
+}

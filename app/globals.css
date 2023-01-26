@@ -29,6 +29,7 @@ body{
   color: var(--main-font-color);
   background-color: var(--main-bg-color);
   display: flex;
+  gap: 0;
 }
 
 a {
@@ -51,4 +52,23 @@ a {
 .container {
   margin: 0 auto;
   padding: .3rem .7rem;
+}
+
+.top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.tweet_button{
+  background-color: var(--main-primary-color);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 34px;
 }
