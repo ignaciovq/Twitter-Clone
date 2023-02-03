@@ -9,6 +9,7 @@
   --main-hover-color: rgba(231, 233, 234, 0.1);
   --big-font-size: 20px;
   --main-font-size: 15px;
+  --smaller-font-size: .9rem;
   --layout-border-color: hsl(205, 6%, 19%);
 }
 

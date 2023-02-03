@@ -1,6 +1,6 @@
 import styles from './page.module.css'
 import { redirect } from 'next/navigation'
-import isLoggedIn from '../utils/isLoggedIn'
+import isLoggedIn from '../utils/session'
 
 function Page () {
   const loggedIn = isLoggedIn()

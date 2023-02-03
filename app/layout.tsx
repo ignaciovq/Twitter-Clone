@@ -5,7 +5,7 @@ import Navbar from './components/navbar'
 import LoginBar from './components/loginbar'
 import AuthContext from './components/authContext'
 import { Sidebar } from './components/sidebar'
-import isLoggedIn from '../utils/isLoggedIn'
+import isLoggedIn from '../utils/session'
 
 export default function RootLayout ({
   children

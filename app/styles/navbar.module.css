@@ -1,19 +1,16 @@
 #header {
-    width: 25rem;
+    width: 22vw;
     min-width: 5rem;
-    height: 100vh;
-    border-right: 1px solid var(--layout-border-color);
+    height: 100vw;
     font-size: var(--big-font-size);
     font-weight: 500;
     position: relative;
 }
 
 #navigation{
-    position: absolute;
+    position: fixed;
     top: .25rem;
-    right: 7.5rem;
-    margin-left: .5rem;
-    width: 24%;
+    width: 20vw;
     padding: 0.1rem 0;
     align-items: center;
 }
@@ -52,12 +49,9 @@
     display: none;
 }
 
-@media (max-width: 1300px){
-    #header{
-        width: 24vw;
-    }
+@media (max-width: 1325px){
    #navigation{
-       margin-left: 0;
+       width: 16vw;
    }
 }
 
@@ -74,8 +68,8 @@
     #navigation{
         margin: 0;
         padding: 0;
-        width: 20%;
-        right: 2rem;
+        width: fit-content;
+        left: 5vw;
     }
     #new_tweet_button{
         padding: 0.75rem;
@@ -89,13 +83,25 @@
     }
 }
 
+@media (max-width: 1100px) {
+    #navigation {
+        left: 2.25vw;
+    }
+}
+
+@media (max-width: 1000px) {
+    #navigation {
+        left: 7.25vw;
+    }
+}
+
 @media (max-width: 750px)
 {
     #header{
         width: 15vw;
     }
     #navigation{
-        width: 15%;
+        left: 2.5vw;
     }
     .nav_item{
        margin: 0;
@@ -110,7 +116,6 @@
     }
     #navigation{
         width: fit-content;
-        right: .75rem;
     }
 
 }

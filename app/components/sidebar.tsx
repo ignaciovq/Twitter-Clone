@@ -1,7 +1,7 @@
 import styles from '../styles/sidebar.module.css'
 import Image from 'next/image'
 import { Searchbar } from './searchbar'
-import isLoggedIn from '../../utils/isLoggedIn'
+import isLoggedIn from '../../utils/session'
 import Link from 'next/link'
 import RegisterMenu from './registerMenu'
 

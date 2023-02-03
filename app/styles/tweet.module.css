@@ -1,0 +1,110 @@
+.tweet{
+    background-color: inherit;
+    color: inherit;
+    padding: .5rem 1rem;
+    border-bottom: 1px solid var(--layout-border-color);
+    column-gap: .75rem;
+}
+
+.tweet button {
+    background-color: inherit;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    border-radius: 34px;
+    padding: .4rem;
+}
+
+.tweet button:not(.retweet_button > button, .like_button > button):hover{
+    background-color: hsla(203, 83%, 52%, .1);
+    filter: invert(49%) sepia(40%) saturate(2675%) hue-rotate(177deg) brightness(97%) contrast(88%);
+}
+
+.profile_pic > img{
+    border-radius: 34px;
+}
+
+.main_section{
+    row-gap: .2rem;
+}
+
+.main_section > header, .author_data, .author_data > div, .reaction_bar > div, .tweet button{
+    display: inherit;
+    align-items: center;
+}
+
+.main_section > header{
+    justify-content: space-between;
+}
+
+.main_section > header > button{
+    filter: invert(48%) sepia(7%) saturate(212%) hue-rotate(163deg) brightness(94%) contrast(89%);
+}
+
+.author_data{
+    column-gap: .25rem;
+}
+
+.author_data a{
+   font-size: var(--main-font-color);
+    font-weight: 700;
+}
+
+.author_data span{
+    color: var(--darker-font-color);
+    font-size: var(--smaller-font-size);
+}
+
+.tweet_text{
+    padding-right: 1rem;
+}
+
+.media {
+    margin: .5rem 0;
+}
+.media > img {
+    border: 1px solid var(--layout-border-color);
+    border-radius: 1rem;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.reaction_bar{
+    column-gap: 4rem;
+    color: var(--darker-font-color);
+    font-size: var(--smaller-font-size);
+
+}
+
+.reaction_bar > div{
+    column-gap: .25rem;
+}
+
+.reaction_bar label {
+    display: none;
+}
+
+.reaction_bar button:hover + span:not(.retweet_button > span, .like_button > span){
+    color: var(--main-primary-color)
+}
+
+.retweet_button button:hover{
+    background-color: rgba(0,186,124,.1);
+    filter: invert(43%) sepia(70%) saturate(815%) hue-rotate(118deg) brightness(104%) contrast(101%);
+}
+
+.retweet_button button:hover + span{
+    color: rgb(0,186,124);
+}
+
+.like_button button:hover{
+    background-color: rgba(249,24,128,.1);
+    filter: invert(25%) sepia(64%) saturate(5510%) hue-rotate(319deg) brightness(97%) contrast(102%);
+}
+
+.like_button button:hover + span{
+    color: rgb(249,24,128);
+}
+
+

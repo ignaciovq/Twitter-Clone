@@ -1,16 +1,18 @@
 #main_section {
     gap: 0;
+    flex-grow: 100;
 }
 
 #main_section > main {
-    min-width: 25rem;
     position: relative;
+    width: 37.8rem;
+    border-left: 1px solid var(--layout-border-color);
+    border-right: 1px solid var(--layout-border-color);
 }
 
-@media (max-width: 915px) {
+@media (max-width: 1000px) {
     #main_section > main {
-        width: 80vw;
-        border-right: 1px solid var(--layout-border-color);
+        width: 37.8rem;
     }
 }
 

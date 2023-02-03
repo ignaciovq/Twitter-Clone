@@ -16,7 +16,7 @@ const switchContent = (event: MouseEvent<HTMLButtonElement>) => {
   }
 }
 
-export const ContentSwitch = ({ children, sections, id }:{ children: ReactNode, sections: Array<string>, id: string }) => {
+export const ContentSwitch = ({ sections, id }:{ sections: Array<string>, id: string }) => {
   return (
     <div id={styles[id]} className={`${styles.content_switcher}`}>
       {sections.map((section, index) => {

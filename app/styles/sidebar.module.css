@@ -1,15 +1,18 @@
 #sidebar{
-    width: 34.75rem;
+    width: 33.25vw;
     height: 100vh;
     position: relative;
-    border-left: 1px solid var(--layout-border-color);
+}
+
+#sidebar > div{
+    position: fixed;
 }
 
 #tos{
     text-decoration: none;
     color: var(--darker-font-color);
-    font-size: 0.775rem;
-    padding: .5rem 1rem;
+    font-size: .775rem;
+    padding: .5rem 1.05rem;
     margin: 0 1rem;
 }
 
@@ -37,12 +40,6 @@
     #sidebar > div{
         display: none;
     }
-    #sidebar {
-        width: 7.5vw;
-    }
-}
-
-@media (max-width: 915px) {
     #sidebar {
         display: none;
     }

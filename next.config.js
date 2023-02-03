@@ -10,6 +10,18 @@ const nextConfig = {
         hostname: 'abs.twimg.com',
         port: '',
         pathname: '/sticky/**'
+      },
+      {
+        protocol: 'https',
+        hostname: 'pbs.twimg.com',
+        port: '',
+        pathname: '/profile_images/**'
+      },
+      {
+        protocol: 'https',
+        hostname: 'pbs.twimg.com',
+        port: '',
+        pathname: '/media/**'
       }
     ]
   }
