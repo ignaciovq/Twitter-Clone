@@ -24,9 +24,12 @@ export const authOptions: AuthOptions = {
   callbacks: {
     jwt: async ({ token, user, account, profile }) => {
       user && (token.user = user)
+      // @ts-ignore
+      token.user && (token.user.expires = token.exp)
       if (account) {
         token.accessToken = account.access_token
       }
+
       return token
     },
     session: async ({ session, token, user }) => {

@@ -1,3 +1,55 @@
 {
-  "homepage": ["Para ti", "Siguiendo"]
+  "homepage": [
+    {
+      "label": "Para ti",
+      "href": "home"
+    },
+    {
+      "label": "Siguiendo",
+      "href": "home"
+    }],
+  "explore": [
+    {
+    "label": "Para ti",
+    "href": "explore/tabs/for-you"
+    },
+    {
+      "label": "Tendencias",
+      "href": "explore/tabs/trending"
+    },
+    {
+      "label": "Noticias",
+      "href": "explore/tabs/news_unified"
+    },
+    {
+      "label": "Deportes",
+      "href": "explore/tabs/sports_unified"
+    },
+    {
+      "label": "Entretenimiento",
+      "href": "explore/tabs/entertainment_unified"
+    }
+  ],
+  "search": [
+    {
+      "label": "Destacado",
+      "href": ""
+    },
+    {
+      "label": "Más reciente",
+      "href": ""
+    },
+    {
+      "label": "Personas",
+      "href": ""
+    },
+    {
+      "label": "Fotos",
+      "href": ""
+    },
+    {
+      "label": "Videos",
+      "href": ""
+    }
+  ]
 }

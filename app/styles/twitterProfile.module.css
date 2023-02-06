@@ -1,0 +1,39 @@
+.user_profile{
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.profile_pic img{
+    object-fit: contain;
+    border-radius: 99px;
+    border: .5rem solid var(--main-bg-color);
+}
+
+.user_data{
+    row-gap: .2rem;
+}
+
+.user_data h2{
+    font-weight: 550;
+}
+
+.user_data span{
+    font-size: var(--main-font-size);
+    color: var(--darker-font-color);
+}
+
+.user_data > div {
+    display: flex;
+    flex-direction: row;
+    gap: .2rem;
+    align-items: center;
+}
+
+.creation_date{
+    gap: .2rem;
+}
+
+.creation_date span{
+    color: var(--darker-font-color);
+}
+

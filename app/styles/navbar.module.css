@@ -5,6 +5,7 @@
     font-size: var(--big-font-size);
     font-weight: 500;
     position: relative;
+    z-index: 5;
 }
 
 #navigation{
@@ -13,10 +14,12 @@
     width: 20vw;
     padding: 0.1rem 0;
     align-items: center;
+    z-index: 5;
 }
 
 #nav_menu{
     width: fit-content;
+    z-index: 5;
 }
 
 .nav_item{

@@ -7,7 +7,8 @@
           "size": {
             "width": 30,
             "height": 30
-          }
+          },
+          "href": "/"
         }
       },
       {
@@ -18,7 +19,8 @@
         "icon": {
           "src": "/icons/nav_menu/home.svg",
           "alt": "Home icon"
-        }
+        },
+        "href": "/home"
       },
       {
         "label": {
@@ -28,7 +30,8 @@
         "icon": {
           "src": "/icons/nav_menu/hashtag.svg",
           "alt": "Hashtag icon"
-        }
+        },
+        "href": "/explore"
       },
       {
         "label": {

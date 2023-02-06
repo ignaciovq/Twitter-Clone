@@ -1,11 +1,45 @@
 #sidebar{
     width: 33.25vw;
-    height: 100vh;
     position: relative;
+    z-index: 1;
 }
 
 #sidebar > div{
     position: fixed;
+    z-index: 1;
+    padding: 0 2rem;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#sidebar > div::-webkit-scrollbar {
+    display: none;
+}
+
+#sidebar_trends{
+    width: 95%;
+    border-radius: 16px;
+    background-color: var(--lighter-bg-color);
+    gap: 0;
+    margin-top: .25rem;
+}
+
+#sidebar_trends h2{
+    font-weight: 550;
+    flex-grow: 1;
+    padding: 1rem;
+}
+
+#sidebar_trends > a{
+    color: var(--main-primary-color);
+    font-weight: 550;
+    flex-grow: 1;
+    padding: 1rem;
+}
+
+#sidebar_trends > a:hover{
+    background-color: var(--main-hover-color);
 }
 
 #tos{

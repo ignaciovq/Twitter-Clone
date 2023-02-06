@@ -3,6 +3,7 @@ import linkData from '../../data/nav_menu.json'
 import Image from 'next/image'
 import SessionMenu from './sessionMenu'
 import isLoggedIn from '../../utils/session'
+import Link from 'next/link'
 
 export default function Navbar () {
   const { links } = linkData
@@ -16,10 +17,10 @@ export default function Navbar () {
             const iconWidth = link.icon?.size ? link.icon.size.width : 26
             const iconHeight = link.icon?.size ? link.icon.size.height : 26
             return (
-              <a href='/Users/ignacio/WebstormProjects/ignaciovq/twitter-clone/pages' key={link.icon.alt} className={`${styles.nav_item} flex_row`}>
+              <Link href={link.href || '/'} key={link.icon.alt} className={`${styles.nav_item} flex_row`}>
                 <Image src={link.icon.src} alt={link.icon.alt} width={iconWidth} height={iconHeight} />
                 {link.label && <span>{link.label.es}</span>}
-              </a>
+              </Link>
             )
           })}
         </section>

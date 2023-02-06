@@ -2,14 +2,14 @@ import type { TweetData } from '../../services/twitterAPIv2.d'
 import styles from '../styles/tweet.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
-import { setVerifiedIcon } from '../../utils/tweets'
+import { parseTweetDate, setVerifiedIcon } from '../../utils/tweetHandling'
 import { TweetReactionBar } from './tweetReactionBar'
 
 /* href={`${process.env.NEXTAUTH_URL}/${tweet.author.username}/status/${tweet.id}`} */
 
 export const Tweet = ({ tweet }:{ tweet: TweetData }) => {
   const verifiedIcon = setVerifiedIcon(tweet.author?.verified_type)
-  const creationDate = new Date(tweet.created_at).toLocaleDateString(undefined, { month: 'short', day: 'numeric' }).toLowerCase()
+  const creationDate = parseTweetDate(tweet.created_at)
   return (
     <div className={`${styles.tweet} flex_row`}>
       <div className={styles.profile_pic}>
@@ -31,7 +31,21 @@ export const Tweet = ({ tweet }:{ tweet: TweetData }) => {
         {tweet.media && (
           <div className={styles.media}>
             {tweet.media.map((media) => {
-              return (<Image key={media.media_key} src={media.url} alt={media.alt_text || ''} width={510.8} height={media.height} />)
+              if (media?.type === 'video' && media?.url) {
+                return (
+                  <video key={media.media_key} controls width='510.8px' height='auto' src={media.url} poster={media.preview_image_url}>
+                    {media?.variants && media.variants.map((variant) => {
+                      return <source key={variant.url} src={variant.url} type={variant.content_type} />
+                    })}
+                  </video>
+                )
+              }
+              return (
+                <Image
+                  key={media.media_key} src={media?.url || media?.preview_image_url as string} alt={media.alt_text || ''} width={510.8}
+                  height={media.height}
+                />
+              )
             })}
           </div>
         )}

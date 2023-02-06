@@ -1,4 +1,5 @@
 import type { TwitterProfile } from 'next-auth/providers/twitter'
+import type { JWT } from "next-auth/jwt";
 
 interface BaseTweetObject {
     id: string,
@@ -34,13 +35,19 @@ export interface MediaExpansionObject extends BaseMediaObject {
     width: number,
     height: number,
     alt_text?: string,
+    variants?: {
+        bitrate?: number,
+        content_type: string,
+        url: string
+    }[],
+    duration_ms?: number
 }
 
-export type UserProfile = Required<Omit<TwitterProfile['data'], 'location' | 'entities'> & { verified_type: string }>
+export type UserProfile = Required<Omit<TwitterProfile['data'], 'location' | 'url' | 'entities'> & { verified_type: string }>
 
 export type TweetAuthor = Omit<UserProfile, 'description' | 'protected' | 'created_at' | 'url' | 'pinned_tweet_id'>
 
-type PaginationData = {
+export type PaginationData = {
     newest_id: string,
     oldest_id: string,
     result_count: number,
@@ -63,3 +70,32 @@ export interface TweetData extends BaseTweetObject {
     author: TweetAuthor,
     media?: MediaExpansionObject[]
 }
+
+interface authenticatedEndpointParams {
+    token: JWT
+}
+
+interface TimelineEndpointParams extends authenticatedEndpointParams {
+    endpoint: 'timeline',
+    additionalParams: {
+        userId: string,
+        paginationToken?: string
+    }
+}
+
+interface UsersEndpointParams extends authenticatedEndpointParams {
+    endpoint: 'users',
+    additionalParams: {
+        username: string
+    }
+}
+
+interface SearchEndpointParams {
+    endpoint: 'search',
+    token?: JWT,
+    additionalParams: {
+        query: string
+    }
+}
+
+export type fetchAPIParams = TimelineEndpointParams | UsersEndpointParams | SearchEndpointParams

@@ -4,6 +4,7 @@
     padding: .5rem 1rem;
     border-bottom: 1px solid var(--layout-border-color);
     column-gap: .75rem;
+    z-index: 0;
 }
 
 .tweet button {
@@ -35,6 +36,7 @@
 
 .main_section > header{
     justify-content: space-between;
+
 }
 
 .main_section > header > button{
@@ -43,16 +45,23 @@
 
 .author_data{
     column-gap: .25rem;
+    white-space: nowrap;
 }
 
 .author_data a{
    font-size: var(--main-font-color);
     font-weight: 700;
+    max-width: 18rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .author_data span{
     color: var(--darker-font-color);
     font-size: var(--smaller-font-size);
+    max-width: 10rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .tweet_text{
@@ -61,8 +70,12 @@
 
 .media {
     margin: .5rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) ;
+    gap: .2rem
 }
 .media > img {
+
     border: 1px solid var(--layout-border-color);
     border-radius: 1rem;
     object-fit: cover;
@@ -70,11 +83,16 @@
     height: 100%;
 }
 
+.media > video{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
 .reaction_bar{
-    column-gap: 4rem;
+    justify-content: space-between;
     color: var(--darker-font-color);
     font-size: var(--smaller-font-size);
-
 }
 
 .reaction_bar > div{
@@ -107,4 +125,6 @@
     color: rgb(249,24,128);
 }
 
-
+#search_results{
+    margin-top: 7.5rem;
+}

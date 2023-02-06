@@ -1,9 +1,13 @@
 .content_switcher {
     display: flex;
     border-bottom: 1px solid var(--layout-border-color);
+
 }
 
-.content_switcher button {
+.content_switcher a {
+    display: inherit;
+    justify-content: center;
+    align-items: center;
     flex-grow: 1;
     height: 7.2vh;
     border: none;
@@ -14,15 +18,15 @@
     cursor: pointer;
 }
 
-.content_switcher button:not(.active) {
+.content_switcher a:not(.active) {
     color: var(--darker-font-color);
 }
 
-.content_switcher button:hover{
+.content_switcher a:hover{
     background-color: var(--main-hover-color);
 }
 
-.content_switcher span{
+.content_switcher a{
     width: fit-content;
 }
 
@@ -36,9 +40,15 @@
     content: "";
     position: absolute;
     top: 200%;
-    left: 0%;
+    left: 0;
     width: 100%;
     height: .25rem;
     border-radius: .1rem;
     background-color: var(--main-primary-color);
+}
+
+#profile_tweets_menu a{
+    display: flex;
+    align-items: center;
+    padding: 0 1.75rem;
 }

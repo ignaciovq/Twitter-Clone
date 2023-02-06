@@ -6,7 +6,7 @@
   padding: 0 20px;
   position: fixed;
   bottom: 0;
-  z-index: 5;
+  z-index: 10;
   color: white;
   font-weight: 500;
   justify-content: space-around;

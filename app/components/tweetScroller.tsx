@@ -1,23 +1,14 @@
-import { setAuthorizationHeader } from '../../utils/session'
 import type { TweetData } from '../../services/twitterAPIv2.d'
 import { Tweet } from './tweet'
+import styles from '../styles/tweet.module.css'
 
-async function getTimeline () {
-  const { headers } = setAuthorizationHeader()
-  const res = await fetch('http://localhost:3000/api/timeline', {
-    method: 'GET',
-    headers
-  })
-  return await res.json()
-}
-
-export async function TweetScroller () {
-  const { timeline } = await getTimeline()
-  const tweets = timeline.map((tweet: TweetData) => {
+export function TweetScroller ({ tweetList, id = '' }: { tweetList: TweetData[], id?: string }) {
+  if (!tweetList || tweetList.length < 1) { return (<></>) }
+  const tweets = tweetList.map((tweet: TweetData) => {
     return <Tweet key={tweet.id} tweet={tweet} />
   })
   return (
-    <div>
+    <div id={styles[id]}>
       {tweets}
     </div>
   )

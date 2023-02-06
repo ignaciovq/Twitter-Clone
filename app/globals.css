@@ -25,6 +25,7 @@ body {
   overflow-x: hidden;
 }
 
+
 body{
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   color: var(--main-font-color);
@@ -61,6 +62,7 @@ a {
   left: 0;
   right: 0;
   z-index: 1;
+  background-blend-mode: multiply;
 }
 
 .tweet_button{
@@ -72,4 +74,18 @@ a {
   outline: none;
   cursor: pointer;
   border-radius: 34px;
+}
+
+.round_button {
+  background-color: var(--main-bg-color);
+  color: var(--main-font-color);
+  border: none;
+  outline-color: transparent;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: .45rem;
+}
+
+.round_button:hover{
+    background-color: var(--main-hover-color);
 }
