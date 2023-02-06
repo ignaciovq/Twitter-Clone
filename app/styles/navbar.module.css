@@ -122,3 +122,14 @@
     }
 
 }
+
+@media (max-width: 500px)
+{
+    #header{
+        display: none;
+    }
+    #navigation{
+        display: none;
+    }
+
+}

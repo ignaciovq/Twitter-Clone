@@ -34,6 +34,12 @@ const nextConfig = {
         hostname: 'pbs.twimg.com',
         port: '',
         pathname: '/tweet_video_thumb/**'
+      },
+      {
+        protocol: 'https',
+        hostname: 'pbs.twimg.com',
+        port: '',
+        pathname: '/amplify_video_thumb/**'
       }
     ]
   }

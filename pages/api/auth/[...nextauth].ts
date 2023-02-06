@@ -36,6 +36,7 @@ export const authOptions: AuthOptions = {
       session.user = token.user as User
       return session
     }
+
   }
 }
 export default NextAuth(authOptions)

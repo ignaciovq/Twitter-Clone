@@ -11,7 +11,7 @@ export const TwitterProfile = ({ user }:{user:UserProfile}) => {
     <>
       <section className={`${styles.user_profile} flex_column`}>
         <div className={styles.profile_pic}>
-          <Image src={user.profile_image_url} alt={`${user.username} pic`} width={150} height={150} />
+          <Image src={user?.profile_image_url || 'default_pic.png'} alt={`${user?.username} pic`} width={150} height={150} />
         </div>
         <div className={`${styles.user_data} flex_column`}>
           <div>

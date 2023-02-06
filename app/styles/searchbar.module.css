@@ -29,11 +29,11 @@
     filter: invert(56%) sepia(56%) saturate(3211%) hue-rotate(176deg) brightness(94%) contrast(94%);
 }
 
-#sidebar_search{
+#sidebar_search, #search_section {
     margin-top: .5rem;
 }
 
-#explore_section{
+#explore_section, #search_section{
     flex-grow: 1;
 }
 

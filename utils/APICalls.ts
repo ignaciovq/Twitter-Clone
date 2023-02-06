@@ -41,7 +41,6 @@ export async function getTrends (tab: Tab) {
       method: 'GET',
       next: { revalidate: 3600 }
     })
-    console.log(res)
     return await res.json()
   } catch (err) {
     const { message } = err as Error

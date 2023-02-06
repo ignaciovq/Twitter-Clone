@@ -13,7 +13,7 @@ export default async function Search ({ searchParams }:{ searchParams?: {q: stri
     <>
       <div className='top'>
         <div id={styles.search_section} className='flex_row'>
-          <Searchbar id='explore_section' />
+          <Searchbar id='search_section' />
           <button className={`${styles.settings} round_button`} type='button'>
             <Image
               src='/icons/options.svg'
@@ -22,7 +22,7 @@ export default async function Search ({ searchParams }:{ searchParams?: {q: stri
             />
           </button>
         </div>
-        <ContentTabs id='explore_tabs' sections={search} />
+        <ContentTabs id='search_tabs' sections={search} />
       </div>
       {results && <TweetScroller tweetList={results} id='search_results' />}
     </>
