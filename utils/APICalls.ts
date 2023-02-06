@@ -3,7 +3,7 @@ import { Tab } from './trends'
 import { fetch } from 'next/dist/compiled/@edge-runtime/primitives/fetch'
 
 export async function getTimeline (userId: string) {
-  const baseURL = process.env.NEXTAUTH_URL
+  const baseURL = process.env.HOST
   try {
     const { headers } = setAuthorizationHeader()
     const res = await fetch(`${baseURL}/api/timeline/${userId}`, {
@@ -19,7 +19,7 @@ export async function getTimeline (userId: string) {
 }
 
 export async function getUser (username: string) {
-  const baseURL = process.env.NEXTAUTH_URL
+  const baseURL = process.env.HOST
   try {
     const { headers } = setAuthorizationHeader()
     const res = await fetch(`${baseURL}/api/users/${username}`, {
@@ -35,7 +35,7 @@ export async function getUser (username: string) {
 }
 
 export async function getTrends (tab: Tab) {
-  const baseURL = process.env.NEXTAUTH_URL
+  const baseURL = process.env.HOST
   try {
     const res = await fetch(`${baseURL}/api/trends/${tab}`, {
       method: 'GET',
@@ -51,7 +51,7 @@ export async function getTrends (tab: Tab) {
 }
 
 export async function searchTweets (query: string) {
-  const baseURL = process.env.NEXTAUTH_URL
+  const baseURL = process.env.HOST
   try {
     if (query.match(/\s/)) { query = `"${query}"` }
     const res = await fetch(`${baseURL}/api/search/${query}`, {
