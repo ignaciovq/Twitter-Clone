@@ -5,11 +5,10 @@ import ContentTabs from '../components/contentTabs'
 import sections from '../../data/page_sections.json'
 import { searchTweets } from '../../utils/APICalls'
 import TweetScroller from '../components/tweetScroller'
-
-export default async function Search ({ searchParams }:{searchParams: {q: string}}) {
+export default async function Search ({ searchParams }:{ searchParams?: {q: string} }) {
   const { search } = sections
-  const { q } = searchParams
-  const { results } = q?.length > 3 ? await searchTweets(q) : ''
+  const q = searchParams?.q
+  const { results } = (q && q?.length > 3) ? await searchTweets(q) : ''
   return (
     <>
       <div className='top'>

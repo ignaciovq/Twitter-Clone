@@ -3,9 +3,10 @@ import { Tab } from './trends'
 import { fetch } from 'next/dist/compiled/@edge-runtime/primitives/fetch'
 
 export async function getTimeline (userId: string) {
+  const baseURL = process.env.NEXTAUTH_URL
   try {
     const { headers } = setAuthorizationHeader()
-    const res = await fetch(`http://localhost:3000/api/timeline/${userId}`, {
+    const res = await fetch(`${baseURL}/api/timeline/${userId}`, {
       method: 'GET',
       headers,
       next: { revalidate: 15 }
@@ -18,9 +19,10 @@ export async function getTimeline (userId: string) {
 }
 
 export async function getUser (username: string) {
+  const baseURL = process.env.NEXTAUTH_URL
   try {
     const { headers } = setAuthorizationHeader()
-    const res = await fetch(`http://localhost:3000/api/users/${username}`, {
+    const res = await fetch(`${baseURL}/api/users/${username}`, {
       method: 'GET',
       headers,
       next: { revalidate: 3600 }
@@ -33,22 +35,26 @@ export async function getUser (username: string) {
 }
 
 export async function getTrends (tab: Tab) {
+  const baseURL = process.env.NEXTAUTH_URL
   try {
-    const res = await fetch(`http://localhost:3000/api/trends/${tab}`, {
+    const res = await fetch(`${baseURL}/api/trends/${tab}`, {
       method: 'GET',
       next: { revalidate: 3600 }
     })
+    console.log(res)
     return await res.json()
   } catch (err) {
     const { message } = err as Error
+    console.error(err)
     return { results: undefined, err: message }
   }
 }
 
 export async function searchTweets (query: string) {
+  const baseURL = process.env.NEXTAUTH_URL
   try {
     if (query.match(/\s/)) { query = `"${query}"` }
-    const res = await fetch(`http://localhost:3000/api/search/${query}`, {
+    const res = await fetch(`${baseURL}/api/search/${query}`, {
       method: 'GET',
       next: { revalidate: 5 }
     })

@@ -19,7 +19,7 @@ export const Tweet = ({ tweet }:{ tweet: TweetData }) => {
         <header className='flex_row'>
           <div className={`${styles.author_data} flex_row`}>
             <div>
-              <Link href={`${process.env.NEXTAUTH_URL}/${tweet.author.username}`}>{tweet.author.name}</Link>
+              <Link href={`${process.env.NEXTAUTH_URL}/${tweet.author.username}`} prefetch={false}>{tweet.author.name}</Link>
               {tweet.author.verified && (<Image src={verifiedIcon} alt='verified icon' width={18} height={18} />)}
             </div>
             <span>{`@${tweet.author.username} ·`}</span>

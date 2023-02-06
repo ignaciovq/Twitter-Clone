@@ -17,7 +17,7 @@ export default function Navbar () {
             const iconWidth = link.icon?.size ? link.icon.size.width : 26
             const iconHeight = link.icon?.size ? link.icon.size.height : 26
             return (
-              <Link href={link.href || '/'} key={link.icon.alt} className={`${styles.nav_item} flex_row`}>
+              <Link href={link.href || '/'} key={link.icon.alt} className={`${styles.nav_item} flex_row`} prefetch={false}>
                 <Image src={link.icon.src} alt={link.icon.alt} width={iconWidth} height={iconHeight} />
                 {link.label && <span>{link.label.es}</span>}
               </Link>

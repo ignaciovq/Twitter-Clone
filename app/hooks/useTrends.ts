@@ -1,17 +1,18 @@
 import { useEffect, useState } from 'react'
 import { Trend } from '../../utils/trends'
 
-export const useTrends = () => {
+export const useTrends = (pathname: string) => {
   const [trendData, setTrendData] = useState<Trend[]>([{ header: '', trend: 'Loading...', tweetCount: '# Tweets' }])
 
   useEffect(() => {
-    (async () => {
-      const response = await fetch('/api/trends/for-you')
-      const trends = await response.json() as Trend[]
-      console.log(trends)
-      setTrendData(trends.slice(0, 4))
-    })()
-  }, [])
+    if (pathname !== '/' && !pathname?.includes('/explore')) {
+      (async () => {
+        const response = await fetch('/api/trends/for-you')
+        const trends = await response.json() as Trend[]
+        setTrendData(trends.slice(0, 4))
+      })()
+    }
+  }, [pathname])
 
   return trendData
 }

@@ -27,7 +27,7 @@ export default function RootLayout ({
             <main className='flex_column'>
               {children}
             </main>
-            <Sidebar />
+            <Sidebar loggedIn={loggedIn} />
           </section>
           {/* @ts-ignore */}
           {loggedIn || <LoginBar />}
