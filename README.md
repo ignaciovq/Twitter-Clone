@@ -60,6 +60,8 @@ npm run dev
 yarn dev
 ```
 
+You should now be able to access the app in http://localhost:3000.
+
 [API routes] can be accessed on their respective endpoints. Endpoints without authorization requirements: [http://localhost:3000/api/trends/trending, http://localhost:3000/api/search/{query}]
 
 ## Preview
