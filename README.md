@@ -64,4 +64,4 @@ yarn dev
 
 ## Preview
 
-https://user-images.githubusercontent.com/56691619/217121093-6ef1d9ed-1cf2-40fe-b0aa-b47cd67880ba.mp4
+https://user-images.githubusercontent.com/56691619/217121603-4ba668b7-2cb6-437f-8dfd-2d846b218c23.mp4
