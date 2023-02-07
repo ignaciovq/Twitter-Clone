@@ -14,7 +14,7 @@ A Twitter site clone created using Next 13.
 
 ## Description
 
-This a Twitter Site clone created purely for educational purposes. It doesn't store any user data nor does it share with any third party other than the Twitter Official API. The Twitter logo and other elements from the Twitter brand are property of Twitter, Inc.
+This a Twitter Site clone created purely for educational purposes. It doesn't store any user data nor does it share it with any third party other than the Twitter Official API. The Twitter logo and other elements from the Twitter brand are property of Twitter, Inc.
 
 ## Getting Started
 
