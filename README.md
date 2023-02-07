@@ -28,7 +28,7 @@ NEXTAUTH_URL=http://localhost:3000
 NEXTAUTH_SECRET=
 ```
 
-You can obtain a Twitter bearer token creating a [Twitter Developer Account](https://developer.twitter.com). You need to have a Twitter account to this.
+You can obtain a Twitter bearer token creating a [Twitter Developer Account](https://developer.twitter.com). You need to have a Twitter account for this.
 1. Visit the [Developer Portal](developer.twitter.com/apps) and follow the required prompts to create a developer project. 
 2. It is important to define the User Authentication Settings. Type of App should be WebApp and the callback url should be: http://localhost:3000/api/auth/callback/twitter.
 3. Requesting the API key and secret via the keys and token tab Developer Portal causes Twitter to produce the following things:
