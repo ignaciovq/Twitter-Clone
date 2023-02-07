@@ -66,4 +66,4 @@ You should now be able to access the app in http://localhost:3000.
 
 ## Preview
 
-https://user-images.githubusercontent.com/56691619/217121603-4ba668b7-2cb6-437f-8dfd-2d846b218c23.mp4
+https://user-images.githubusercontent.com/56691619/217129307-80dca419-1256-474b-bfd2-6266330244cc.mp4
