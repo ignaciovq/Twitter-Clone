@@ -1,8 +1,58 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Twitter Clone App
+
+A Twitter site clone created using Next 13. 
+
+## Features
+
+* Authentication through Next-Auth (Twitter Provider).
+* Tweets, trends and profiles visualization through React components.
+* Twitter API 2.0 for searching tweets, showing user profile information and getting tweet timelines.
+* Next 13 Image component and shard to display images and optimize their loading process.
+* HTML video tag for displaying tweet videos.
+* Styling through CSS modules and Vanilla CSS.
+* Typescript custom types to facilitate Twitter API responses handling and adapting.
+
+## Description
+
+This a Twitter Site clone created purely for educational purposes. It doesn't store any user data nor does it share with any third party other than the Twitter Official API. The Twitter logo and other elements from the Twitter brand are property of Twitter, Inc.
 
 ## Getting Started
 
-First, run the development server:
+To get the app to work, you must first clone this repo and create a .env file with the following fields:
+
+```
+TWITTER_CLIENT_ID=
+TWITTER_CLIENT_SECRET=
+TWITTER_BEARER_TOKEN=
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=
+```
+
+You can obtain a Twitter bearer token creating a [Twitter Developer Account](https://developer.twitter.com). You need to have a Twitter account to this.
+1. Visit the [Developer Portal](developer.twitter.com/apps) and follow the required prompts to create a developer project. 
+2. It is important to define the User Authentication Settings. Type of App should be WebApp and the callback url should be: http://localhost:3000/api/auth/callback/twitter.
+3. Requesting the API key and secret via the keys and token tab Developer Portal causes Twitter to produce the following things:
+* API key (this is your 'access key')
+* API secret key (this is your 'access secret')
+* Bearer token
+You'll only need the bearer token for this app. It is possible that you need to request it separately.
+4. You should also request the OAuth 2.0 Client ID and Client Secret in this section.
+
+It is recommended to create a proper value for NEXTAUTH_SECRET using:
+
+```
+$ openssl rand -base64 32
+```
+
+After you have properly configured this .env file, you should install the dependencies with:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -10,27 +60,8 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[API routes] can be accessed on their respective endpoints. Endpoints without authorization requirements: [http://localhost:3000/api/trends/trending, http://localhost:3000/api/search/{query}]
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Preview
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+https://user-images.githubusercontent.com/56691619/217121093-6ef1d9ed-1cf2-40fe-b0aa-b47cd67880ba.mp4
