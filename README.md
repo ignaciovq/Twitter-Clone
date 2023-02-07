@@ -34,8 +34,8 @@ You can obtain a Twitter bearer token creating a [Twitter Developer Account](htt
 3. Requesting the API key and secret via the keys and token tab Developer Portal causes Twitter to produce the following things:
 * API key (this is your 'access key')
 * API secret key (this is your 'access secret')
-* Bearer token
-You'll only need the bearer token for this app. It is possible that you need to request it separately.
+* Bearer token.
+> You'll only need the bearer token for this app. It is possible that you need to request it separately.
 4. You should also request the OAuth 2.0 Client ID and Client Secret in this section.
 
 It is recommended to create a proper value for NEXTAUTH_SECRET using:
